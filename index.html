@@ -4,56 +4,314 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio de Mohamed &amp; Marco</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* --- Basic Reset --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #121212;
+      color: #e0e0e0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    /* Light Mode Overrides */
+    body.light-mode {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      padding: 20px;
+      text-align: center;
+      background-color: #1e1e1e;
+      position: relative;
+    }
+    /* Dark/light mode toggle button */
+    #toggle-mode {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 8px 12px;
+      cursor: pointer;
+      background-color: #0073e6;
+      border: none;
+      color: #fff;
+      border-radius: 4px;
+    }
+    /* Language Toggle */
+    .language-toggle {
+      text-align: right;
+      padding: 10px 20px;
+    }
+    .language-toggle a {
+      color: inherit;
+      text-decoration: none;
+      margin: 0 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .language-toggle a.active {
+      text-decoration: underline;
+    }
+    /* Hero Section */
+    .hero {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .hero img {
+      width: 100%;
+      height: auto;
+      opacity: 0.9;
+    }
+    .hero h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2.5em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+    /* Main Navigation */
+    .main-nav {
+      background-color: #262626;
+      padding: 10px 0;
+    }
+    .main-nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+    .main-nav ul li {
+      margin: 0 15px;
+    }
+    .main-nav ul li a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    /* Sections */
+    main {
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    .project {
+      background: #1e1e1e;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+    .project img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    /* Social and Contact Info */
+    .social a {
+      color: inherit;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .social img {
+      vertical-align: middle;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+    footer {
+      background-color: #1e1e1e;
+      color: #aaa;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9em;
+    }
+    /* Hide language sections by default */
+    #content-en { display: none; }
+  </style>
 </head>
 <body>
-  <!-- Language Toggle: French active -->
   <header>
-    <nav class="language-toggle">
-      <a href="index.html" class="active">Français</a> | 
-      <a href="index_en.html">English</a>
-    </nav>
+    <button id="toggle-mode">Light Mode</button>
+    <div class="language-toggle">
+      <a id="lang-fr" class="active">Français</a> | 
+      <a id="lang-en">English</a>
+    </div>
     <div class="hero">
-      <img src="images/hero.jpg" alt="Image inspirante">
-      <h1>Bienvenue sur notre portfolio</h1>
+      <!-- Banner image from Freepik -->
+      <img src="https://img.freepik.com/premium-vector/web-development-coding-programming-futuristic-banner-computer-code-laptop_3482-5582.jpg" alt="Bannière de développement web">
+      <h1>Portfolio de Mohamed &amp; Marco</h1>
     </div>
     <nav class="main-nav">
       <ul>
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#a-propos">À propos</a></li>
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#accueil" class="nav-link">Accueil</a></li>
+        <li><a href="#apropos" class="nav-link">À propos</a></li>
+        <li><a href="#projets" class="nav-link">Projets</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#lettre" class="nav-link">Lettre</a></li>
       </ul>
     </nav>
   </header>
+  
   <main>
-    <section id="accueil">
-      <h2>Accueil</h2>
-      <p>Nous sommes Mohamed Elbahrawy et Marco Patulli, experts en automatisation logicielle et web.</p>
-    </section>
-    <section id="a-propos">
-      <h2>À propos</h2>
-      <p>Actuellement étudiants à Polytechnique de Montréal et Concordia, et forts de notre expérience à la Sûreté du Québec, nous offrons des solutions d’automatisation sur mesure pour optimiser les processus de votre entreprise.</p>
-    </section>
-    <section id="projets">
-      <h2>Projets</h2>
-      <article class="project">
-        <h3>Projet 1</h3>
-        <img src="images/project1.jpg" alt="Projet 1">
-        <p>Description du projet 1 avec des détails sur la technologie utilisée et les résultats obtenus.</p>
-      </article>
-      <!-- Ajouter d'autres projets ici -->
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Pour plus d’informations, envoyez-nous un courriel à 
-        <a href="mailto:contact@example.com">contact@example.com</a> ou appelez-nous au <strong>123-456-7890</strong>.
-      </p>
-    </section>
+    <!-- French Content (default) -->
+    <div id="content-fr">
+      <section id="accueil">
+        <h2>Accueil</h2>
+        <p>Nous sommes Mohamed Elbahrawy et Marco Patulli, experts en automatisation logicielle et web.</p>
+      </section>
+      
+      <section id="apropos">
+        <h2>À propos</h2>
+        <p>Actuellement étudiants à Polytechnique de Montréal et Concordia, et forts de notre expérience à la Sûreté du Québec, nous offrons des solutions d’automatisation sur mesure pour optimiser les processus de votre entreprise.</p>
+        <p>L’automatisation permet de réduire considérablement le temps passé sur des tâches répétitives, ce qui se traduit par d’importantes économies. En libérant du temps pour des activités à plus forte valeur ajoutée, elle augmente la productivité et la rentabilité de votre entreprise.</p>
+      </section>
+      
+      <section id="projets">
+        <h2>Projets</h2>
+        <article class="project">
+          <h3>Projet 1</h3>
+          <!-- Replace with a project image if needed -->
+          <img src="https://via.placeholder.com/800x400?text=Projet+1" alt="Projet 1">
+          <p>Description du projet 1 avec des détails sur la technologie utilisée et les résultats obtenus.</p>
+        </article>
+        <!-- Vous pouvez ajouter d'autres projets ici -->
+      </section>
+      
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Pour plus d’informations, envoyez-nous un courriel à <a href="mailto:m.elbahrawy4@gmail.com" style="color:#4da6ff;">m.elbahrawy4@gmail.com</a> ou appelez-nous au <strong>+1 (514) 448-6399</strong>.</p>
+        <p><strong>Devis gratuits disponibles</strong></p>
+        <div class="social">
+          <p>Retrouvez-nous sur :</p>
+          <p>
+            <!-- GitHub Links -->
+            <a href="https://github.com/AudileMoon606" target="_blank">Mohamed GitHub</a> |
+            <a href="https://github.com/MARC0CND" target="_blank">Marco GitHub</a>
+          </p>
+          <p>
+            <!-- LinkedIn Links with placeholder images (update the src with the actual profile image URLs if available) -->
+            <a href="https://www.linkedin.com/in/mohamedelbahrawy2004?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+              <img src="https://via.placeholder.com/50?text=M" alt="Mohamed LinkedIn">
+            </a>
+            <a href="https://www.linkedin.com/in/marco-patulli-119723244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+              <img src="https://via.placeholder.com/50?text=MP" alt="Marco LinkedIn">
+            </a>
+          </p>
+        </div>
+      </section>
+      
+      <section id="lettre">
+        <h2>Lettre de Présentation</h2>
+        <p><strong>Objet :</strong> Solutions d’automatisation pour optimiser vos opérations</p>
+        <p>
+          Bonjour [Nom du contact/Équipe de l’entreprise],<br><br>
+          Je m’appelle Mohamed Elbahrawy et, avec mon collègue Marco Patulli, nous proposons des services d’automatisation sur mesure pour les entreprises à travers le Québec. Actuellement, nous poursuivons nos études en génie logiciel et génie informatique à Polytechnique de Montréal et à Concordia, tout en accumulant une précieuse expérience à la Sûreté du Québec.<br><br>
+          Notre expertise en automatisation logicielle et web nous a valu une grande reconnaissance dans notre environnement professionnel. Nous maîtrisons la programmation en Python, HTML et, pour Marco, également en Java et C++, ce qui nous permet de créer des solutions efficaces et adaptées à vos besoins.<br><br>
+          Nous serions ravis de pouvoir discuter de la manière dont nous pourrions aider votre entreprise à optimiser vos processus. N’hésitez pas à nous contacter au <strong>+1 (514) 448-6399</strong> ou par courriel à <a href="mailto:m.elbahrawy4@gmail.com" style="color:#4da6ff;">m.elbahrawy4@gmail.com</a> pour convenir d’un rendez-vous ou d’une démonstration.<br><br>
+          Merci pour votre temps et votre considération.<br><br>
+          Cordialement,<br>
+          Mohamed Elbahrawy<br>
+          Marco Patulli
+        </p>
+      </section>
+    </div>
+    
+    <!-- English Content -->
+    <div id="content-en">
+      <section id="home">
+        <h2>Home</h2>
+        <p>We are Mohamed Elbahrawy and Marco Patulli, experts in software and web automation.</p>
+      </section>
+      
+      <section id="about">
+        <h2>About</h2>
+        <p>Currently studying at Polytechnique de Montréal and Concordia, and with extensive experience at Sûreté du Québec, we provide custom automation solutions to streamline your business processes.</p>
+        <p>Automation significantly reduces the time spent on repetitive tasks, resulting in major cost savings. By freeing up time for higher-value activities, automation boosts productivity and profitability.</p>
+      </section>
+      
+      <section id="projects">
+        <h2>Projects</h2>
+        <article class="project">
+          <h3>Project 1</h3>
+          <img src="https://via.placeholder.com/800x400?text=Project+1" alt="Project 1">
+          <p>Description of Project 1 with details on the technology used and the outcomes achieved.</p>
+        </article>
+      </section>
+      
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>For more information, email us at <a href="mailto:m.elbahrawy4@gmail.com" style="color:#4da6ff;">m.elbahrawy4@gmail.com</a> or call us at <strong>+1 (514) 448-6399</strong>.</p>
+        <p><strong>Free quotes available</strong></p>
+        <div class="social">
+          <p>Connect with us:</p>
+          <p>
+            <a href="https://github.com/AudileMoon606" target="_blank">Mohamed GitHub</a> |
+            <a href="https://github.com/MARC0CND" target="_blank">Marco GitHub</a>
+          </p>
+          <p>
+            <a href="https://www.linkedin.com/in/mohamedelbahrawy2004?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+              <img src="https://via.placeholder.com/50?text=M" alt="Mohamed LinkedIn">
+            </a>
+            <a href="https://www.linkedin.com/in/marco-patulli-119723244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+              <img src="https://via.placeholder.com/50?text=MP" alt="Marco LinkedIn">
+            </a>
+          </p>
+        </div>
+      </section>
+      
+      <section id="letter">
+        <h2>Presentation Letter</h2>
+        <p><strong>Subject:</strong> Automation Solutions to Streamline Your Business Operations</p>
+        <p>
+          Dear [Contact Name/Company Team],<br><br>
+          My name is Mohamed Elbahrawy, and together with my colleague Marco Patulli, we offer expert automation services tailored for businesses across Québec. Currently, we are pursuing our degrees in Software and Computer Engineering at Polytechnique de Montréal and Concordia, respectively, while gaining hands-on experience at Sûreté du Québec.<br><br>
+          Our work in software and web automation has earned us high appreciation from our current employer, and we have successfully developed solutions that reduce manual tasks and improve operational efficiency. We specialize in programming with Python, HTML, and, in Marco’s case, Java and C++, allowing us to deliver custom, robust automation solutions.<br><br>
+          We would welcome the opportunity to discuss how we can assist your company in streamlining your software tasks. Please feel free to contact us at <strong>+1 (514) 448-6399</strong> or via email at <a href="mailto:m.elbahrawy4@gmail.com" style="color:#0073e6;">m.elbahrawy4@gmail.com</a> to arrange a meeting or a demonstration of our capabilities.<br><br>
+          Thank you for your time and consideration.<br><br>
+          Sincerely,<br>
+          Mohamed Elbahrawy<br>
+          Marco Patulli
+        </p>
+      </section>
+    </div>
+    
   </main>
+  
   <footer>
     <p>&copy; 2025 Mohamed Elbahrawy &amp; Marco Patulli. Tous droits réservés.</p>
   </footer>
-  <script src="js/script.js"></script>
+  
+  <script>
+    // Language Toggle Functionality
+    const langFR = document.getElementById('lang-fr');
+    const langEN = document.getElementById('lang-en');
+    const contentFR = document.getElementById('content-fr');
+    const contentEN = document.getElementById('content-en');
+    
+    langFR.addEventListener('click', () => {
+      langFR.classList.add('active');
+      langEN.classList.remove('active');
+      contentFR.style.display = 'block';
+      contentEN.style.display = 'none';
+    });
+    langEN.addEventListener('click', () => {
+      langEN.classList.add('active');
+      langFR.classList.remove('active');
+      contentFR.style.display = 'none';
+      contentEN.style.display = 'block';
+    });
+    
+    // Dark/Light Mode Toggle Functionality
+    const toggleBtn = document.getElementById('toggle-mode');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      toggleBtn.textContent = document.body.classList.contains('light-mode') ? 'Dark Mode' : 'Light Mode';
+    });
+  </script>
 </body>
 </html>
