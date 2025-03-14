@@ -114,7 +114,7 @@
 
     /* === Main Content === */
     main { max-width: 1000px; margin: 20px auto; padding: 0 20px; }
-    section.page { display: none; }
+    section.page { display: none; padding-bottom: 40px; }
     section.page.active { display: block; }
     section.page h2 {
       margin-bottom: 15px;
@@ -123,6 +123,10 @@
       padding-bottom: 5px;
     }
     section.page p, section.page ul { margin-bottom: 15px; }
+    
+    /* Additional styles for richer content */
+    .info { margin-top: 20px; }
+    .info p { margin-bottom: 10px; }
 
     /* === Profiles (About Pages) === */
     .profiles {
@@ -196,10 +200,10 @@
       </ul>
     </nav>
     <main>
+      <!-- Accueil Section -->
       <section id="fr-home" class="page active">
         <header>
           <div class="hero">
-            <!-- Banner image from external link -->
             <a href="#fr-home">
               <img src="https://img.freepik.com/premium-vector/web-development-coding-programming-futuristic-banner-computer-code-laptop_3482-5582.jpg" alt="Bannière">
             </a>
@@ -208,10 +212,16 @@
         </header>
         <h2>Accueil</h2>
         <p>
-          Nous sommes Mohamed Elbahrawy et Marco Patulli, experts en automatisation logicielle et web. Nous aidons les entreprises à économiser du temps et de l'argent grâce à l'automatisation de leurs processus. Devis gratuits disponibles.
+          Bienvenue chez AutomatiQ Solutions inc., votre partenaire en automatisation sur mesure. Nous combinons expertise technique et innovation pour transformer vos processus métier.
         </p>
+        <div class="info">
+          <p><strong>Notre Mission :</strong> Libérer votre potentiel en automatisant vos tâches répétitives afin de réduire les coûts et d'augmenter la productivité.</p>
+          <p><strong>Nos Valeurs :</strong> Innovation, efficacité et excellence. Nous nous engageons à offrir des solutions fiables et évolutives adaptées à votre entreprise.</p>
+          <p><strong>Pourquoi nous choisir ?</strong> Des solutions éprouvées, une équipe dynamique et des devis gratuits pour analyser vos besoins spécifiques.</p>
+        </div>
       </section>
       
+      <!-- À Propos Section -->
       <section id="fr-about" class="page">
         <header>
           <div class="hero small-hero">
@@ -221,32 +231,35 @@
             <h1>À Propos</h1>
           </div>
         </header>
-        <h2>Notre Histoire</h2>
+        <h2>Notre Histoire &amp; Vision</h2>
         <p>
-          Mohamed étudie l'ingénierie logicielle à Polytechnique de Montréal et Marco le génie informatique à Concordia. Forts de notre expérience à la Sûreté du Québec, nous avons développé une expertise solide en automatisation logicielle et web.
+          Fondée par Mohamed Elbahrawy et Marco Patulli, AutomatiQ Solutions inc. est née de la volonté de rendre l'automatisation accessible et efficace pour toutes les entreprises québécoises. Forts de nos expériences à la Sûreté du Québec et dans le milieu académique, nous mettons en œuvre des solutions innovantes pour optimiser vos processus.
         </p>
+        <div class="info">
+          <p><strong>Notre Vision :</strong> Transformer l'industrie grâce à l'automatisation intelligente et durable, en libérant les entreprises des tâches répétitives.</p>
+          <p><strong>Nos Experts :</strong> Mohamed, étudiant en ingénierie logicielle à Polytechnique de Montréal, et Marco, étudiant en génie informatique à Concordia, apportent des compétences pointues en développement et intégration de systèmes.</p>
+        </div>
         <div class="profiles">
           <div class="profile">
-            <!-- Mohamed's profile image (clickable, links to his LinkedIn) -->
             <a href="https://www.linkedin.com/in/mohamedelbahrawy2004?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
               <img src="https://media.licdn.com/dms/image/v2/D5603AQHRiBagVF3BQA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1665154076548?e=2147483647&v=beta&t=YAxs58QTQBzsWvJFfECNbSPEv3xdeMS0-8pG2WY_qXs" alt="Mohamed">
             </a>
             <h3>Mohamed Elbahrawy</h3>
-            <p>Étudiant en ingénierie logicielle, expert en automatisation.</p>
+            <p>Expert en automatisation et ingénierie logicielle.</p>
             <a href="https://www.linkedin.com/in/mohamedelbahrawy2004?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a>
           </div>
           <div class="profile">
-            <!-- Marco's profile image (clickable, links to his LinkedIn) -->
             <a href="https://www.linkedin.com/in/marco-patulli-119723244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
               <img src="https://media.licdn.com/dms/image/v2/D4E35AQEfqIhmipfU9w/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1724921652082?e=1742533200&v=beta&t=8K706e3y4AEnZYs6dR4gfPr_abBXeDF_IXs2Y8WXHKQ" alt="Marco">
             </a>
             <h3>Marco Patulli</h3>
-            <p>Étudiant en génie informatique, expert en automatisation.</p>
+            <p>Spécialiste en automatisation et génie informatique.</p>
             <a href="https://www.linkedin.com/in/marco-patulli-119723244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</a>
           </div>
         </div>
       </section>
       
+      <!-- Services Section -->
       <section id="fr-services" class="page">
         <header>
           <div class="hero small-hero">
@@ -256,20 +269,24 @@
             <h1>Services</h1>
           </div>
         </header>
-        <h2>Services Offerts</h2>
+        <h2>Nos Services d'Automatisation</h2>
         <p>
-          Nous proposons une gamme complète de services d'automatisation pour répondre aux besoins de votre entreprise :
+          Chez AutomatiQ Solutions inc., nous offrons des solutions complètes pour automatiser vos processus métier. Notre approche est personnalisée, visant à augmenter l'efficacité tout en réduisant les coûts opérationnels.
         </p>
         <ul>
-          <li><strong>Automatisation des processus :</strong> Réduction des tâches répétitives et gain de temps significatif.</li>
-          <li><strong>Intégration des systèmes :</strong> Connexion fluide entre applications pour optimiser votre workflow.</li>
-          <li><strong>Développement sur mesure :</strong> Création d'outils personnalisés pour améliorer vos opérations.</li>
-          <li><strong>Maintenance et support :</strong> Suivi régulier et assistance technique pour garantir la performance.</li>
-          <li><strong>Conseil en optimisation :</strong> Analyse approfondie et recommandations pour améliorer vos processus internes.</li>
+          <li><strong>Automatisation des processus :</strong> Réduction des tâches répétitives grâce à des scripts sur mesure et des workflows automatisés.</li>
+          <li><strong>Intégration des systèmes :</strong> Connexion fluide entre vos applications et plateformes, permettant une communication efficace entre vos différents services.</li>
+          <li><strong>Développement sur mesure :</strong> Création d’outils et d’applications personnalisés pour répondre aux besoins spécifiques de votre entreprise.</li>
+          <li><strong>Maintenance et support :</strong> Suivi continu de vos solutions d’automatisation avec des mises à jour régulières et un support technique dédié.</li>
+          <li><strong>Conseil en optimisation :</strong> Audit de vos processus existants et recommandations pour maximiser la productivité et réduire les erreurs humaines.</li>
         </ul>
-        <p>Nos solutions permettent d’importantes économies et une productivité accrue. <strong>Devis gratuits disponibles!</strong></p>
+        <div class="info">
+          <p><strong>Impact économique :</strong> Nos solutions permettent de réaliser des économies significatives en libérant du temps pour des activités à plus forte valeur ajoutée et en réduisant les coûts opérationnels.</p>
+          <p><strong>Innovation continue :</strong> Nous nous engageons à rester à la pointe des technologies d'automatisation pour offrir des solutions toujours plus performantes.</p>
+        </div>
       </section>
       
+      <!-- Contact Section -->
       <section id="fr-contact" class="page">
         <header>
           <div class="hero small-hero">
@@ -279,14 +296,15 @@
             <h1>Contact</h1>
           </div>
         </header>
-        <h2>Contact</h2>
+        <h2>Contactez-nous</h2>
         <p>
-          Pour plus d'informations ou pour obtenir un devis gratuit, contactez-nous :
+          Pour toute demande d’information ou pour obtenir un devis gratuit, n’hésitez pas à nous contacter. Nous serons ravis de discuter de vos besoins et de vous proposer une solution sur mesure.
         </p>
-        <ul>
-          <li>Email: <a href="mailto:m.elbahrawy4@gmail.com">m.elbahrawy4@gmail.com</a></li>
-          <li>Téléphone: +1 (514) 448-6399</li>
-        </ul>
+        <div class="info">
+          <p><strong>Email :</strong> <a href="mailto:m.elbahrawy4@gmail.com">m.elbahrawy4@gmail.com</a></p>
+          <p><strong>Téléphone :</strong> +1 (514) 448-6399</p>
+          <p><strong>Adresse :</strong> Basés au Québec, nous intervenons dans toute la province.</p>
+        </div>
       </section>
     </main>
   </div>
@@ -303,21 +321,27 @@
       </ul>
     </nav>
     <main>
+      <!-- Home Section -->
       <section id="en-home" class="page active">
         <header>
           <div class="hero">
             <a href="#en-home">
               <img src="https://img.freepik.com/premium-vector/web-development-coding-programming-futuristic-banner-computer-code-laptop_3482-5582.jpg" alt="Banner">
             </a>
-            <h1>Welcome to the Portfolio of Mohamed &amp; Marco</h1>
+            <h1>AutomatiQ Solutions Inc.</h1>
           </div>
         </header>
         <h2>Home</h2>
         <p>
-          We are Mohamed Elbahrawy and Marco Patulli, experts in software and web automation. We help businesses save time and money by automating their processes. Free quotes are available.
+          Welcome to AutomatiQ Solutions Inc., your partner for customized automation solutions. We combine technical expertise with innovation to streamline your business processes.
         </p>
+        <div class="info">
+          <p><strong>Our Mission:</strong> To empower your business by automating repetitive tasks, thereby reducing costs and boosting productivity.</p>
+          <p><strong>Our Values:</strong> Innovation, efficiency, and excellence. We are committed to providing reliable and scalable solutions tailored to your needs.</p>
+        </div>
       </section>
       
+      <!-- About Section -->
       <section id="en-about" class="page">
         <header>
           <div class="hero small-hero">
@@ -327,10 +351,14 @@
             <h1>About</h1>
           </div>
         </header>
-        <h2>Our Story</h2>
+        <h2>Our Story &amp; Vision</h2>
         <p>
-          Mohamed is studying Software Engineering at Polytechnique de Montréal while Marco is studying Computer Engineering at Concordia. With extensive experience at Sûreté du Québec, we offer custom automation solutions.
+          Founded by Mohamed Elbahrawy and Marco Patulli, AutomatiQ Solutions Inc. was born out of the desire to make automation accessible and effective for Quebec businesses. With extensive experience from Sûreté du Québec and our academic backgrounds, we deliver innovative solutions to optimize your operations.
         </p>
+        <div class="info">
+          <p><strong>Our Vision:</strong> To revolutionize industries with intelligent and sustainable automation, freeing companies from repetitive tasks.</p>
+          <p><strong>Our Experts:</strong> Mohamed, a Software Engineering student at Polytechnique de Montréal, and Marco, a Computer Engineering student at Concordia, bring cutting-edge skills to every project.</p>
+        </div>
         <div class="profiles">
           <div class="profile">
             <a href="https://www.linkedin.com/in/mohamedelbahrawy2004?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
@@ -351,6 +379,7 @@
         </div>
       </section>
       
+      <!-- Services Section -->
       <section id="en-services" class="page">
         <header>
           <div class="hero small-hero">
@@ -360,20 +389,24 @@
             <h1>Services</h1>
           </div>
         </header>
-        <h2>Services Offered</h2>
+        <h2>Our Automation Services</h2>
         <p>
-          We offer a comprehensive range of automation services tailored to your business needs:
+          At AutomatiQ Solutions Inc., we offer a full range of automation solutions designed to meet your unique business requirements. Our tailored approach ensures that every process is streamlined and efficient.
         </p>
         <ul>
-          <li><strong>Process Automation:</strong> Streamline repetitive tasks and save significant time.</li>
-          <li><strong>System Integration:</strong> Seamlessly connect your applications to boost productivity.</li>
-          <li><strong>Custom Development:</strong> Build tailor-made tools to optimize your operations.</li>
-          <li><strong>Maintenance &amp; Support:</strong> Ongoing monitoring and technical support to ensure peak performance.</li>
-          <li><strong>Consulting &amp; Optimization:</strong> In-depth analysis and recommendations to enhance your internal processes.</li>
+          <li><strong>Process Automation:</strong> Automate repetitive tasks with custom scripts and workflows, saving you valuable time.</li>
+          <li><strong>System Integration:</strong> Seamlessly connect your applications and platforms to enhance overall productivity.</li>
+          <li><strong>Custom Development:</strong> Develop bespoke tools and applications that align perfectly with your operational needs.</li>
+          <li><strong>Maintenance &amp; Support:</strong> Continuous monitoring and technical support to keep your systems running at peak performance.</li>
+          <li><strong>Consulting &amp; Optimization:</strong> In-depth audits of your existing processes and strategic recommendations to maximize efficiency.</li>
         </ul>
-        <p>Our solutions deliver substantial cost savings and increased productivity. <strong>Free quotes available!</strong></p>
+        <div class="info">
+          <p><strong>Economic Impact:</strong> Our solutions not only reduce labor costs but also free up resources for higher-value activities.</p>
+          <p><strong>Innovative Approach:</strong> We continually update our methods to ensure you benefit from the latest automation technologies.</p>
+        </div>
       </section>
       
+      <!-- Contact Section -->
       <section id="en-contact" class="page">
         <header>
           <div class="hero small-hero">
@@ -383,14 +416,15 @@
             <h1>Contact</h1>
           </div>
         </header>
-        <h2>Contact</h2>
+        <h2>Contact Us</h2>
         <p>
-          For more information or to request a free quote, please contact us:
+          For further information or to request a free quote, please get in touch with us. We are eager to discuss your needs and tailor a solution just for you.
         </p>
-        <ul>
-          <li>Email: <a href="mailto:m.elbahrawy4@gmail.com">m.elbahrawy4@gmail.com</a></li>
-          <li>Phone: +1 (514) 448-6399</li>
-        </ul>
+        <div class="info">
+          <p><strong>Email:</strong> <a href="mailto:m.elbahrawy4@gmail.com">m.elbahrawy4@gmail.com</a></p>
+          <p><strong>Phone:</strong> +1 (514) 448-6399</p>
+          <p><strong>Location:</strong> Based in Quebec, serving businesses across the province.</p>
+        </div>
       </section>
     </main>
   </div>
@@ -404,7 +438,7 @@
       <a href="https://www.linkedin.com/in/mohamedelbahrawy2004?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn de Mohamed / Mohamed's LinkedIn</a> | 
       <a href="https://www.linkedin.com/in/marco-patulli-119723244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn de Marco / Marco's LinkedIn</a>
     </div>
-    <p>&copy; 2025 Mohamed Elbahrawy &amp; Marco Patulli. Tous droits réservés.</p>
+    <p>&copy; 2025 AutomatiQ Solutions inc. - Mohamed Elbahrawy &amp; Marco Patulli. Tous droits réservés.</p>
   </footer>
 
   <script>
