@@ -88,7 +88,7 @@ input:checked + .slider:before {
   margin-left: 10px;
 }
 
-/* Styles pour la section Hero */
+/* Section Hero */
 header {
   text-align: center;
   position: relative;
