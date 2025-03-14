@@ -3,55 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio of Mohamed &amp; Marco</title>
+  <title>Home - Portfolio of Mohamed &amp; Marco</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Language Toggle: English active -->
-  <header>
-    <nav class="language-toggle">
+  <!-- Global Top Bar -->
+  <div id="global-top-bar">
+    <div class="language-toggle">
       <a href="index.html">Français</a> | 
       <a href="index_en.html" class="active">English</a>
-    </nav>
+    </div>
+    <div class="mode-toggle">
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider"></span>
+      </label>
+      <span id="modeLabel">Light Mode</span>
+    </div>
+  </div>
+
+  <header>
     <div class="hero">
-      <img src="images/hero.jpg" alt="Inspirational image">
-      <h1>Welcome to Our Portfolio</h1>
+      <img src="images/banner.jpg" alt="Banner">
+      <h1>Welcome to the Portfolio of Mohamed &amp; Marco</h1>
     </div>
     <nav class="main-nav">
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index_en.html" class="active">Home</a></li>
+        <li><a href="about_en.html">About</a></li>
+        <li><a href="services_en.html">Services</a></li>
+        <li><a href="contact_en.html">Contact</a></li>
       </ul>
     </nav>
   </header>
+  
   <main>
     <section id="home">
       <h2>Home</h2>
-      <p>We are Mohamed Elbahrawy and Marco Patulli, experts in software and web automation.</p>
-    </section>
-    <section id="about">
-      <h2>About</h2>
-      <p>Currently studying at Polytechnique de Montréal and Concordia, and with extensive experience at Sûreté du Québec, we provide custom automation solutions to optimize your business processes.</p>
-    </section>
-    <section id="projects">
-      <h2>Projects</h2>
-      <article class="project">
-        <h3>Project 1</h3>
-        <img src="images/project1.jpg" alt="Project 1">
-        <p>Description of Project 1 with details on the technology used and the outcomes achieved.</p>
-      </article>
-      <!-- Add more projects here -->
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>For more information, email us at 
-        <a href="mailto:contact@example.com">contact@example.com</a> or call us at <strong>123-456-7890</strong>.
+      <p>
+        We are Mohamed Elbahrawy and Marco Patulli, experts in software and web automation. We help businesses save time and money by automating their processes. Free quotes are available.
       </p>
     </section>
   </main>
+  
   <footer>
+    <div class="social-links">
+      <a href="https://github.com/AudileMoon606" target="_blank">Mohamed's GitHub</a> | 
+      <a href="https://github.com/MARC0CND" target="_blank">Marco's GitHub</a>
+      <br>
+      <a href="https://www.linkedin.com/in/mohamedelbahrawy2004?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">Mohamed's LinkedIn</a> | 
+      <a href="https://www.linkedin.com/in/marco-patulli-119723244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">Marco's LinkedIn</a>
+    </div>
     <p>&copy; 2025 Mohamed Elbahrawy &amp; Marco Patulli. All rights reserved.</p>
   </footer>
   <script src="js/script.js"></script>
